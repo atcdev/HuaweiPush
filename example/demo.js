@@ -4,7 +4,7 @@
 /**
  * Created by li.jiang on 2016/12/15.
  */
-
+var proxyOpt = 'http://192.168.77.104:55555';
 var APPID = 'xxxxx';
 var APPSECRET = 'xxxxxxx';
 var API = require('../index');
@@ -26,7 +26,7 @@ var api = new API(APPID, APPSECRET, function (callback) {
 	// 请将token存储到全局，跨进程、跨机器级别的全局，比如写到数据库、redis等
 	// 这样才能在cluster模式及多机情况下使用，以下为写入到文件的示例
 	fs.writeFile(__dirname+'/access_token.txt', JSON.stringify(token), callback);
-});
+}, proxyOpt);
 
 api.openpush_message_single_send(
 	{deviceToken:'0867981021055317300000147700CN01',message:
