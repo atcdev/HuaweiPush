@@ -4,9 +4,9 @@
 /**
  * Created by li.jiang on 2016/12/15.
  */
-var proxyOpt = 'http://192.168.77.104:55555';
-var APPID = 'xxxxx';
-var APPSECRET = 'xxxxxxx';
+var proxyOpt = 'http://192.168.1.8:55555';
+var APPID = 'xxxx';
+var APPSECRET = 'xxxxxxxxxxx';
 var API = require('../index');
 var fs = require('fs');
 var api = new API(APPID, APPSECRET, function (callback) {
